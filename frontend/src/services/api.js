@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
         "Content-Type": "application/json"
     }
@@ -9,7 +9,7 @@ const api = axios.create({
 
 export const getServiceDependencies = async (serviceName) => {
     const response = await api.get(
-        `/services/${serviceName}/dependencies`
+        `/api/services/${serviceName}/dependencies`
     );
 
     return response.data;
@@ -17,7 +17,7 @@ export const getServiceDependencies = async (serviceName) => {
 
 export const getServiceImpact = async (serviceName) => {
     const response = await api.get(
-        `/services/${serviceName}/impact`
+        `/api/services/${serviceName}/impact`
     );
 
     return response.data;
@@ -25,14 +25,14 @@ export const getServiceImpact = async (serviceName) => {
 
 export const getPackageImpact = async (packageName) => {
     const response = await api.get(
-        `/packages/${packageName}/impact`
+        `/api/packages/${packageName}/impact`
     );
 
     return response.data;
 };
 
 export const findPath = async (source, target) => {
-    const response = await api.get("/path", {
+    const response = await api.get("/api/path", {
         params: {
             source,
             target

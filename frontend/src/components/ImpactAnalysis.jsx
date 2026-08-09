@@ -81,7 +81,7 @@ function ImpactAnalysis() {
 
           <div className="service-grid">
             {impact.affectedServices.map((affectedService) => (
-              <div className="service-card" key={affectedService.name}>
+              <div className="service-card" key={`${affectedService.name}-${affectedService.depth}`}>
                 <h3>{affectedService.name}</h3>
 
                 <p>Team: {affectedService.team}</p>
