@@ -95,6 +95,7 @@ input {
 
 .operation {
   width: 100%;
+  margin-top: 1%;
 }
 
 .operation-header {
@@ -281,6 +282,14 @@ input {
   border-radius: 4px;
   color: #64748b;
   font-size: 11px;
+}
+
+.impact-summary {
+  margin-top: 20px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
 }
 
 

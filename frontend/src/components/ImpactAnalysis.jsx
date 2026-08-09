@@ -67,13 +67,13 @@ function ImpactAnalysis() {
         <div className="result-section">
           <div className="impact-summary">
             <div>
-              <span>Target Service</span>
+              <span>Target Service: </span>
 
               <strong>{impact.service}</strong>
             </div>
 
             <div>
-              <span>Potentially Affected</span>
+              <span>Potentially Affected: </span>
 
               <strong>{impact.totalAffected}</strong>
             </div>
