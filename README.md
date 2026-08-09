@@ -93,7 +93,7 @@ ORDER BY depth, service.name
 
 ---
 
-## Data & Seed Dataset
+## 4. Data & Seed Dataset
 
 The project includes the sample datasets required to populate the CognoDB graph.
 
@@ -107,10 +107,10 @@ backend/
     │   ├── packages.js
     │   └── repositories.js
     └── seed.js
-
+```
 ---
 
-## 4. Application
+## 5. Application
 
 - **Backend** (`/backend`): Express REST API, layered as `routes → controllers → services → queries`, with a Neo4j driver session opened per request and centralized error handling for a graceful message when CognoDB is unreachable.
 - **Frontend** (`/frontend`): React + Vite dashboard with tabs for Service Dependencies, Impact Analysis, and Path Finder, so a non-technical user can search a service/package by name and see who depends on it without writing Cypher.
@@ -127,15 +127,15 @@ backend/
 
 ---
 
-## 5. Setup & running locally
+## 6. Setup & running locally
 
-### 5.1 Create a CognoDB instance
+### 6.1 Create a CognoDB instance
 
 1. Sign up at [console.cognodb.com/signup](https://console.cognodb.com/signup) (free, no credit card).
 2. Create a free **c0** instance and pick a region — it provisions in under a minute.
 3. Copy the connection URI (`bolt+s://<instance-id>.databases.cognodb.cloud`) and the generated password for user `cognodb` — the password is shown once.
 
-### 5.2 Backend
+### 6.2 Backend
 
 ```bash
 cd backend
@@ -160,7 +160,7 @@ npm run seed               # clears and loads repositories, services, packages, 
 npm run dev                 # starts the API on http://localhost:5000
 ```
 
-### 5.3 Frontend
+### 6.3 Frontend
 
 ```bash
 cd frontend
@@ -179,13 +179,13 @@ npm run dev   # starts the app on http://localhost:5173
 
 ---
 
-## 6. Deployment
+## 7. Deployment
 
 The frontend is deployed on Vercel: https://graph-impact-graph-db.vercel.app. The backend can be deployed to any Node host (Render/Railway/Fly.io) — set the same `COGNODB_*` environment variables there and point the frontend's `VITE_API_URL` at it.
 
 ---
 
-## 7. Screenshots
+## 8. Screenshots
 
 ### Service Dependencies
 
@@ -205,4 +205,3 @@ The Path Finder shows the relationship path between two services.
 
 ![Find Path](docs/find-path.png)
 ---
-
