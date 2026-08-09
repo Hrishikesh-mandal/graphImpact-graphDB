@@ -2,9 +2,9 @@ import { useState } from "react";
 import { findPath } from "../services/api";
 
 function PathFinder() {
-  const [source, setSource] = useState("api-gateway");
+  const [source, setSource] = useState("");
 
-  const [target, setTarget] = useState("payment-service");
+  const [target, setTarget] = useState("");
 
   const [graphData, setGraphData] = useState(null);
 
@@ -60,7 +60,7 @@ function PathFinder() {
         <input
           value={source}
           onChange={(e) => setSource(e.target.value)}
-          placeholder="Source service"
+          placeholder="Source service eg. api-gateway"
         />
 
         <span className="arrow">→</span>
@@ -68,7 +68,7 @@ function PathFinder() {
         <input
           value={target}
           onChange={(e) => setTarget(e.target.value)}
-          placeholder="Target service"
+          placeholder="Target service eg. payment-service"
         />
 
         <button

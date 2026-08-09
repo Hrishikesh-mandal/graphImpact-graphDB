@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getServiceImpact } from "../services/api";
 
 function ImpactAnalysis() {
-  const [service, setService] = useState("payment-service");
+  const [service, setService] = useState("");
 
   const [impact, setImpact] = useState(null);
 

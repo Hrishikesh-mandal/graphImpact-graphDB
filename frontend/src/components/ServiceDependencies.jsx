@@ -4,7 +4,7 @@ import { getServiceDependencies } from "../services/api";
 function ServiceDependencies() {
   const [searched, setSearched] = useState(false);
 
-  const [service, setService] = useState("api-gateway");
+  const [service, setService] = useState("");
 
   const [dependencies, setDependencies] = useState([]);
 
