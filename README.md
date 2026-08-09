@@ -170,7 +170,22 @@ The frontend is deployed on Vercel: https://graph-impact-graph-db.vercel.app. Th
 
 ## 7. Screenshots
 
-_(Add screenshots of the Service Dependencies, Impact Analysis, and Path Finder tabs here.)_
+### Service Dependencies
 
+The Dependencies view shows the direct dependencies of a selected service.
+
+![Service Dependencies](docs/dependencies.png)
+
+### Impact Analysis
+
+The Impact Analysis view shows downstream services affected through dependency relationships.
+
+![Impact Analysis](docs/impact-analysis.png)
+
+### Find Path
+
+The Path Finder shows the relationship path between two services.
+
+![Find Path](docs/find-path.png)
 ---
 
