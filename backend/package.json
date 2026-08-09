@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend API for GraphImpact",
+  "main": "src/server.js",
+  "scripts": {
+        "dev": "node --watch src/server.js",
+        "start": "node src/server.js",
+        "seed": "node seed/seed.js",
+        "test:connection": "node testConnection.js"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "neo4j-driver": "^6.2.0"
+  }
+}
