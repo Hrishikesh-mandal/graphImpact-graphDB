@@ -26,6 +26,3 @@ router.get(
 );
 
 module.exports = router;
-
-
-// nothing

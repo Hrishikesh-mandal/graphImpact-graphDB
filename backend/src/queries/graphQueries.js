@@ -1,24 +1,3 @@
-// const GET_SERVICE_DEPENDENCIES = `
-//     MATCH (s:Service {name: $name})
-//           -[:DEPENDS_ON]->(dependency)
-//     RETURN dependency
-// `;
-
-// const GET_SERVICE_IMPACT = `
-//     MATCH path =
-//         (dependency)
-//         -[:DEPENDS_ON*1..5]->
-//         (s:Service {name: $name})
-//     RETURN path
-// `;
-
-// module.exports = {
-//     GET_SERVICE_DEPENDENCIES,
-//     GET_SERVICE_IMPACT
-// };
-
-
-
 const GET_SERVICE_DEPENDENCIES = `
     MATCH (s:Service {name: $name})
           -[:DEPENDS_ON]->(dependency:Service)

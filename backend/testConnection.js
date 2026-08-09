@@ -20,7 +20,7 @@ async function testConnection() {
 
         console.log(result.records[0].get("message"));
     } catch (error) {
-        console.error("❌ CognoDB connection failed:");
+        console.error("CognoDB connection failed:");
         console.error(error.message);
     } finally {
         await session.close();
