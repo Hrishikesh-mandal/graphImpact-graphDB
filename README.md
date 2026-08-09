@@ -205,3 +205,7 @@ The Path Finder shows the relationship path between two services.
 
 ![Find Path](docs/find-path.png)
 ---
+
+## Demo video
+
+![Watch the demo video](docs/demo-video.mp4)
