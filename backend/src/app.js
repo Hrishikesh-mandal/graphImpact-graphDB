@@ -1,9 +1,10 @@
 const express = require("express");
 const graphRoutes = require("./routes/graphRoutes");
 const errorHandler = require("./middleware/errorHandler");
-
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
 // Parse incoming JSON requests
 app.use(express.json());
 
