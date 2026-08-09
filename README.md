@@ -93,6 +93,23 @@ ORDER BY depth, service.name
 
 ---
 
+## Data & Seed Dataset
+
+The project includes the sample datasets required to populate the CognoDB graph.
+
+The datasets are stored in the repository under:
+
+```text
+backend/
+└── seed/
+    ├── data/
+    │   ├── services.js
+    │   ├── packages.js
+    │   └── repositories.js
+    └── seed.js
+
+---
+
 ## 4. Application
 
 - **Backend** (`/backend`): Express REST API, layered as `routes → controllers → services → queries`, with a Neo4j driver session opened per request and centralized error handling for a graceful message when CognoDB is unreachable.
